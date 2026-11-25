@@ -1,0 +1,79 @@
+/* Base — variables de tema (:root), tipografía y reset */
+
+:root {
+  --wine: #5c1e47;
+  --plum: #35172f;
+  --deep: #25162e;
+  --berry: #8c3f6d;
+  --blush: #f8eef3;
+  --cream: #fbfaf7;
+  --page: #f7f6f8;
+  --ink: #282537;
+  --muted: #7d7a89;
+  --line: #ece8ef;
+  --green: #238567;
+  --blue: #3b7ac1;
+  --purple: #8064c9;
+  --amber: #ca8b32;
+  --red: #c4526d;
+  --white: #fff;
+  --shadow: 0 8px 36px rgba(41, 20, 44, 0.045);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h2 {
+  letter-spacing: -0.5px;
+}
+
+svg {
+  display: block;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 254px minmax(0, 1fr);
+}

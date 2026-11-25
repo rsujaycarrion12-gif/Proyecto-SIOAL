@@ -1,0 +1,21 @@
+/**
+ * Pantalla: Personal y capacidad.
+ */
+'use strict';
+
+function renderStaff() {
+  let month = monthTotals(),
+    staffActive = db.staff.filter(p => p.active),
+    cap = nval(db.config.staffCapacity),
+    estimate = cap ? Math.max(1, Math.ceil(month.kg / cap)) : null,
+    delta = estimate ? estimate - staffActive.length : null,
+    series = weeklyData().slice(-8);
+  return `${head('Personal y capacidad operativa', 'Comparación semanal y mensual para evaluar necesidades de personal, sin tiempos de trabajo.', btn('staff-new', ic('plus') + ' Añadir trabajador', 'primary'))}<div class="kpi-grid">${kpi('Personal activo', staffActive.length, 'Personas registradas', 'users')}${kpi('Guías del mes', money(month.orders, 0), month.label, 'file', 'blue')}${kpi('Peso registrado del mes', money(month.kg) + ' kg', 'Fecha de la orden / ingreso', 'box', 'green')}${kpi('Capacidad por persona', cap ? money(cap) + ' kg' : 'Pendiente', 'Supuesto a validar', 'sliders', 'amber')}</div><div class="grid-2"><div class="card card-pad"><div class="card-header"><h3>Escenario de dotación de personal</h3><span class="pill wine">Modelo de capacidad</span></div><div class="callout blue" style="margin-bottom:20px">La recomendación requiere conocer la capacidad mensual verificable por trabajador. El peso por sí solo no permite definir cuántas personas se necesitan; también influyen tipos de encomienda y apoyo del montacargas.</div><form id="staffForm"><div class="field"><label>Capacidad de referencia por trabajador (kg/mes)</label><input type="number" min="1" step="1" name="staffCapacity" placeholder="Introducir dato validado o supuesto" value="${cap || ''}"></div><div class="modal-actions" style="padding:5px 0 0"><button type="submit" class="btn soft">${ic('check')} Evaluar escenario</button></div></form><div class="divider"></div>${estimate ? `<div class="soft-box"><div class="info-label">Resultado orientativo del escenario</div><div style="font-size:32px;font-weight:900;margin:12px 0">${estimate} <span style="font-size:15px;font-weight:650">personas de referencia</span></div><p class="sub" style="margin:0">${delta > 0 ? `El escenario sugiere revisar si hacen falta ${delta} personas adicionales.` : delta < 0 ? 'La carga de referencia se cubriría con el personal disponible según este supuesto.' : 'El personal actual coincide con el escenario de referencia.'}</p></div>` : '<div class="empty"><div class="empty-icon">' + ic('users') + '</div><strong>Sin capacidad validada</strong><p>Introduce un valor de referencia para mostrar un escenario, no una recomendación definitiva.</p></div>'}<p class="inline-note" style="margin-top:15px">El cálculo anterior es división por capacidad, no CP-SAT. La versión productiva implementará CP-SAT con restricciones contrastadas sobre actividades, habilidades y recursos, sin métricas de duración.</p></div><div class="card card-pad"><div class="card-header"><h3>Personal registrado</h3><span class="pill">${db.staff.length} personas</span></div><div class="scroll-y">${db.staff.map(p => `<div class="alert-item"><div class="alert-dot info">${ic('users', 17)}</div><div style="flex:1"><strong>${esc(p.name)}</strong><p>${esc(p.role)}</p></div><button class="btn small ${p.active ? 'green' : ''}" data-action="staff-toggle" data-id="${esc(p.id)}">${p.active ? 'Disponible' : 'Inactivo'}</button></div>`).join('')}</div></div></div><div class="card card-pad" style="margin-top:18px"><div class="card-header"><h3>Carga semanal de mercancía (kg)</h3></div>${barChart(series, 'kg')}<p class="inline-note">Incluye todas las órdenes con fecha registrada, sin medir tiempos ni productividad por hora.</p></div>`;
+}
+function openStaff() {
+  openModal(
+    'Registrar trabajador',
+    'Información básica para escenarios operativos.',
+    `<form id="newStaffForm"><div class="field"><label>Nombre completo *</label><input name="name" required maxlength="100" placeholder="Nombre y apellido"></div><div class="field"><label>Función principal</label><select name="role"><option>Almacén</option><option>Recepción</option><option>Despacho</option><option>Gerencia</option><option>Secretaría</option><option>Apoyo general</option></select></div><div class="modal-actions" style="padding:0"><button class="btn primary" type="submit">Registrar persona</button></div></form>`
+  );
+}

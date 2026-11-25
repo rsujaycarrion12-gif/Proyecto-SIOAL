@@ -1,0 +1,46 @@
+# ---- Datos de la empresa (personales y comerciales): NUNCA subir ----
+Datos/*
+!Datos/LEEME.md
+*.xlsx
+modelo/datos/
+
+# ---- Artículo y material del curso (van aparte) ----
+Articulo/
+Claude outputs/
+Ejemplo Docente/
+
+# ---- Copias de respaldo y archivos que ya no se usan ----
+_original/
+_respaldo_antes_mejoras/
+_respaldo_antes_multiarchivo/
+Nueva carpeta/
+SIOAL_2_6_ABC_ubicaciones_validas.html
+
+# Scripts y resultados de etapas anteriores (datos simulados / estudio de simulación)
+modelo/entrenar_reales.py
+modelo/evaluar_simulacion.py
+modelo/experimento_sim_real.py
+modelo/estudio_simulacion.py
+modelo/evaluacion_ventanas.py
+modelo/figuras_estudio.py
+modelo/validacion_publica.py
+modelo/notebooks/
+modelo/scripts/exportar_desde_app.js
+modelo/resultados/reales/
+modelo/resultados/sim_real/
+modelo/resultados/simulacion/
+modelo/resultados/simulacion_mc/
+modelo/resultados/figuras_articulo/
+
+# ---- Entorno ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+package-lock.json
+modelo/package.json
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini

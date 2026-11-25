@@ -1,0 +1,13 @@
+variable,modelo,semana,pronostico,min_80,max_80,min_95,max_95
+kg,ses_opt,2026-11-23,304873.5,,,,
+kg,ses_opt,2026-11-30,304873.5,,,,
+kg,ses_opt,2026-12-07,304873.5,,,,
+kg,ses_opt,2026-12-14,304873.5,,,,
+bultos,ses,2026-11-23,15343.2,,,,
+bultos,ses,2026-11-30,15343.2,,,,
+bultos,ses,2026-12-07,15343.2,,,,
+bultos,ses,2026-12-14,15343.2,,,,
+viajes,ses_opt,2026-11-23,14.6,,,,
+viajes,ses_opt,2026-11-30,14.6,,,,
+viajes,ses_opt,2026-12-07,14.6,,,,
+viajes,ses_opt,2026-12-14,14.6,,,,

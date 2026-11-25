@@ -1,0 +1,435 @@
+/* Pantalla Entrenamiento IA */
+
+/* Centro de entrenamiento SIOAL IA - diseño autónomo */
+.train-banner {
+  background: linear-gradient(113deg, #3e1836 0%, #702951 64%, #8d4266 100%);
+  border-radius: 19px;
+  color: white;
+  padding: 27px 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 34px rgba(62, 24, 54, 0.17);
+}
+
+.train-banner::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -85px;
+  top: -145px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 47px rgba(255, 255, 255, 0.04),
+    0 0 0 94px rgba(255, 255, 255, 0.03);
+}
+
+.train-banner h2 {
+  font-size: clamp(21px, 2.5vw, 28px);
+  margin: 7px 0 10px;
+  color: white;
+  line-height: 1.21;
+  letter-spacing: -0.5px;
+  max-width: 680px;
+}
+
+.train-banner p {
+  color: #f2dce9;
+  line-height: 1.65;
+  font-size: 13px;
+  max-width: 630px;
+}
+
+.train-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.45px;
+  font-weight: 800;
+  color: #eab4d0;
+}
+
+.train-bannermark {
+  display: grid;
+  place-items: center;
+  border: 1px solid #bb759a;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  width: 92px;
+  height: 92px;
+  flex: none;
+  position: relative;
+  z-index: 1;
+  color: #ffe4f4;
+}
+
+.train-statgrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.train-stat {
+  border: 1px solid #e9e1e9;
+  border-radius: 15px;
+  background: #fff;
+  padding: 18px 19px;
+  min-height: 113px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 9px rgba(51, 25, 54, 0.025);
+}
+
+.train-stat > span {
+  color: #857988;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+}
+
+.train-stat > strong {
+  font-size: 23px;
+  font-weight: 800;
+  color: #4b2743;
+  letter-spacing: -0.55px;
+  line-height: 1.13;
+  overflow-wrap: anywhere;
+}
+
+.train-stat > small {
+  font-size: 11px;
+  color: #9a8e99;
+  line-height: 1.4;
+}
+
+.train-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  background: #f0eaf0;
+  border-radius: 14px;
+  margin: 3px 0 19px;
+  overflow-x: auto;
+}
+
+.train-tabs button {
+  white-space: nowrap;
+  flex: 1;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #7b6879;
+  font-size: 12px;
+  font-weight: 740;
+  padding: 11px 13px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.train-tabs button.selected {
+  background: white;
+  color: #572746;
+  box-shadow: 0 2px 9px rgba(45, 16, 42, 0.12);
+}
+
+.train-tabs button span {
+  font-size: 10px;
+  color: #aa899d;
+  margin-right: 5px;
+}
+
+.train-drop {
+  border: 2px dashed #d6b8c8;
+  background: #fdf9fc;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 18px;
+  min-height: 205px;
+  margin: 9px 0 17px;
+}
+
+.train-drop strong {
+  font-size: 14px;
+  color: #5e3753;
+}
+
+.train-drop p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #887b88;
+  max-width: 330px;
+}
+
+.train-drop input {
+  max-width: 100%;
+  font-size: 12px;
+  color: #6b5365;
+}
+
+.train-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.train-summary-note {
+  margin-top: 17px;
+  padding: 14px;
+  background: #f8f5fa;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #726476;
+  line-height: 1.6;
+}
+
+.train-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #6e5a6e;
+  font-size: 12px;
+  line-height: 1.57;
+  background: #faf8fb;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+}
+
+.train-check svg {
+  flex: none;
+  margin-top: 1px;
+  color: #9a5384;
+}
+
+.train-warning,
+.train-ok {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  border-radius: 13px;
+  padding: 15px 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 10px 0 17px;
+}
+
+.train-warning {
+  background: #fff7ed;
+  border: 1px solid #f6ddba;
+  color: #87552d;
+}
+
+.train-warning svg {
+  flex: none;
+  margin-top: 1px;
+  color: #d79525;
+}
+
+.train-ok {
+  background: #ecf9f4;
+  border: 1px solid #b9e8d5;
+  color: #2d7259;
+}
+
+.train-chart {
+  width: 100%;
+}
+
+.training-chart {
+  border-radius: 14px;
+  padding: 10px 13px 12px;
+  border: 1px solid #f0e9ef;
+  background: #fff;
+}
+
+.training-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 320px;
+}
+
+.training-chartlegend {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #766c77;
+  font-size: 11px;
+  margin: 4px 5px 4px;
+}
+
+.training-chartlegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.training-chartlegend i {
+  display: inline-block;
+  width: 19px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.train-emptystate {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  background: #faf6fa;
+  border: 1px dashed #d9c5d4;
+  padding: 20px;
+  border-radius: 13px;
+  margin: 15px 0;
+  color: #765971;
+}
+
+.train-emptystate svg {
+  flex: none;
+}
+
+.train-emptystate strong {
+  font-size: 13px;
+}
+
+.train-emptystate p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 7px;
+}
+
+.train-formulas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.train-formulas details {
+  padding: 13px;
+  border-radius: 11px;
+  background: #faf7fa;
+  border: 1px solid #eee8ee;
+  min-width: 0;
+}
+
+.train-formulas summary {
+  font-size: 12px;
+  color: #5f425a;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.train-formulas p {
+  font-size: 11px;
+  color: #766575;
+  line-height: 1.6;
+  margin: 11px 0 9px;
+}
+
+.train-formulas code {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  background: #f2ebf0;
+  padding: 10px;
+  border-radius: 7px;
+  color: #704060;
+}
+
+.train-zone {
+  padding: 13px 0;
+  border-bottom: 1px solid #f1edf1;
+  font-size: 12px;
+}
+
+.train-zone:last-of-type {
+  border: 0;
+}
+
+.train-progress {
+  height: 8px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #f3eff4;
+  margin-top: 10px;
+}
+
+.train-progress i {
+  height: 100%;
+  display: block;
+  border-radius: 99px;
+}
+
+.train-privacy {
+  margin-top: 19px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #988a9a;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.train-privacy svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+@media (max-width: 1050px) {
+  .train-statgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .train-banner {
+    padding: 20px 18px;
+  }
+
+  .train-bannermark {
+    display: none;
+  }
+
+  .train-statgrid {
+    gap: 9px;
+  }
+
+  .train-stat {
+    padding: 13px;
+    min-height: 102px;
+  }
+
+  .train-stat > strong {
+    font-size: 19px;
+  }
+
+  .train-tabs button {
+    font-size: 11px;
+    padding: 10px 9px;
+  }
+
+  .train-formulas {
+    grid-template-columns: 1fr;
+  }
+
+  .train-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}

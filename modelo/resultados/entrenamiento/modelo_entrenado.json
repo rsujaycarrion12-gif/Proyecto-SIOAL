@@ -1,0 +1,332 @@
+{
+ "generado": "2026-11-25T10:43:45",
+ "origen": {
+  "carpeta": "datos_publicos",
+  "archivos": [
+   "semanal.csv"
+  ],
+  "desde": "2026-07-27",
+  "hasta": "2026-11-09"
+ },
+ "particion": {
+  "tipo": "experimental",
+  "n": 15,
+  "sem_entrenamiento": 9,
+  "sem_validacion": 6,
+  "sem_prueba": 0,
+  "ini_validacion": 9,
+  "ini_prueba": 15
+ },
+ "regla_seleccion": "menor MAE en validación; empate (< 2 %) → menor MAE en el historial",
+ "variables": {
+  "kg": {
+   "campo_app": "kg",
+   "modelo": "ses_opt",
+   "nombre": "Suavización exponencial α óptimo",
+   "parametros": {
+    "alpha": 0.05
+   },
+   "ultimo_valor_observado": 335485.0,
+   "validacion": {
+    "naive": {
+     "MAE": 33988.3333,
+     "RMSE": 42825.7566,
+     "WAPE_%": 11.0137
+    },
+    "ma3": {
+     "MAE": 29856.7222,
+     "RMSE": 32735.8448,
+     "WAPE_%": 9.6748
+    },
+    "wma3": {
+     "MAE": 31543.4833,
+     "RMSE": 34717.4884,
+     "WAPE_%": 10.2214
+    },
+    "ses": {
+     "MAE": 31850.3225,
+     "RMSE": 32986.3727,
+     "WAPE_%": 10.3209
+    },
+    "trend": {
+     "MAE": 49358.6667,
+     "RMSE": 59921.1541,
+     "WAPE_%": 15.9943
+    },
+    "ses_opt": {
+     "MAE": 23048.5185,
+     "RMSE": 27687.1651,
+     "WAPE_%": 7.4687
+    }
+   },
+   "historial": {
+    "naive": {
+     "MAE": 31883.0,
+     "WAPE_%": 10.3599
+    },
+    "ma3": {
+     "MAE": 29647.3333,
+     "WAPE_%": 9.6334
+    },
+    "wma3": {
+     "MAE": 30959.3857,
+     "WAPE_%": 10.0598
+    },
+    "ses": {
+     "MAE": 31555.595,
+     "WAPE_%": 10.2535
+    },
+    "trend": {
+     "MAE": 51274.801,
+     "WAPE_%": 16.6609
+    },
+    "ses_opt": {
+     "MAE": 19857.6351,
+     "WAPE_%": 6.4524
+    }
+   },
+   "prueba": null,
+   "cumple_umbral_app": null,
+   "pronostico": [
+    {
+     "semana": "2026-11-23",
+     "pronostico": 304873.5,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-11-30",
+     "pronostico": 304873.5,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-07",
+     "pronostico": 304873.5,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-14",
+     "pronostico": 304873.5,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    }
+   ]
+  },
+  "bultos": {
+   "campo_app": "qty",
+   "modelo": "ses",
+   "nombre": "Suavización exponencial α=0,35",
+   "parametros": {
+    "alpha": 0.35
+   },
+   "ultimo_valor_observado": 16621.0,
+   "validacion": {
+    "naive": {
+     "MAE": 1539.8333,
+     "RMSE": 1905.6218,
+     "WAPE_%": 10.2139
+    },
+    "ma3": {
+     "MAE": 1188.6667,
+     "RMSE": 1325.1577,
+     "WAPE_%": 7.8846
+    },
+    "wma3": {
+     "MAE": 1184.0833,
+     "RMSE": 1406.559,
+     "WAPE_%": 7.8542
+    },
+    "ses": {
+     "MAE": 1063.8452,
+     "RMSE": 1327.2721,
+     "WAPE_%": 7.0566
+    },
+    "trend": {
+     "MAE": 2074.1845,
+     "RMSE": 2113.4854,
+     "WAPE_%": 13.7583
+    },
+    "ses_opt": {
+     "MAE": 1205.6166,
+     "RMSE": 1404.134,
+     "WAPE_%": 7.997
+    }
+   },
+   "historial": {
+    "naive": {
+     "MAE": 1454.1429,
+     "WAPE_%": 9.7417
+    },
+    "ma3": {
+     "MAE": 1222.8095,
+     "WAPE_%": 8.1919
+    },
+    "wma3": {
+     "MAE": 1233.0571,
+     "WAPE_%": 8.2606
+    },
+    "ses": {
+     "MAE": 1051.5452,
+     "WAPE_%": 7.0446
+    },
+    "trend": {
+     "MAE": 2274.2806,
+     "WAPE_%": 15.236
+    },
+    "ses_opt": {
+     "MAE": 1043.1714,
+     "WAPE_%": 6.9885
+    }
+   },
+   "prueba": null,
+   "cumple_umbral_app": null,
+   "pronostico": [
+    {
+     "semana": "2026-11-23",
+     "pronostico": 15343.2,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-11-30",
+     "pronostico": 15343.2,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-07",
+     "pronostico": 15343.2,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-14",
+     "pronostico": 15343.2,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    }
+   ]
+  },
+  "viajes": {
+   "campo_app": "orders",
+   "modelo": "ses_opt",
+   "nombre": "Suavización exponencial α óptimo",
+   "parametros": {
+    "alpha": 0.05
+   },
+   "ultimo_valor_observado": 17.0,
+   "validacion": {
+    "naive": {
+     "MAE": 1.8333,
+     "RMSE": 2.3452,
+     "WAPE_%": 13.0952
+    },
+    "ma3": {
+     "MAE": 2.0556,
+     "RMSE": 2.1387,
+     "WAPE_%": 14.6825
+    },
+    "wma3": {
+     "MAE": 2.0333,
+     "RMSE": 2.1471,
+     "WAPE_%": 14.5238
+    },
+    "ses": {
+     "MAE": 1.9517,
+     "RMSE": 2.0802,
+     "WAPE_%": 13.9406
+    },
+    "trend": {
+     "MAE": 2.994,
+     "RMSE": 3.2466,
+     "WAPE_%": 21.3861
+    },
+    "ses_opt": {
+     "MAE": 1.7409,
+     "RMSE": 1.9831,
+     "WAPE_%": 12.4351
+    }
+   },
+   "historial": {
+    "naive": {
+     "MAE": 1.7143,
+     "WAPE_%": 12.2449
+    },
+    "ma3": {
+     "MAE": 1.8095,
+     "WAPE_%": 12.9252
+    },
+    "wma3": {
+     "MAE": 1.8286,
+     "WAPE_%": 13.0612
+    },
+    "ses": {
+     "MAE": 1.7753,
+     "WAPE_%": 12.6805
+    },
+    "trend": {
+     "MAE": 2.7704,
+     "WAPE_%": 19.7886
+    },
+    "ses_opt": {
+     "MAE": 1.6024,
+     "WAPE_%": 11.4457
+    }
+   },
+   "prueba": null,
+   "cumple_umbral_app": null,
+   "pronostico": [
+    {
+     "semana": "2026-11-23",
+     "pronostico": 14.6,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-11-30",
+     "pronostico": 14.6,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-07",
+     "pronostico": 14.6,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    },
+    {
+     "semana": "2026-12-14",
+     "pronostico": 14.6,
+     "min_80": null,
+     "max_80": null,
+     "min_95": null,
+     "max_95": null
+    }
+   ]
+  }
+ }
+}

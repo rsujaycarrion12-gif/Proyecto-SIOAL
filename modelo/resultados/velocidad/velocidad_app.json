@@ -1,0 +1,230 @@
+{
+ "nota": "Mediana de 5 ejecuciones en Node 22 + jsdom 24 (sin navegador). El CSV de 100 000 filas es SINTÉTICO (prueba de carga). Con datos solo históricos la app no emite pronóstico (historicalOnly).",
+ "carga_app_ms": 147,
+ "grupos": [
+  {
+   "nombre": "real_4",
+   "archivos": 4,
+   "bytes": 293467,
+   "filas": 221,
+   "validas": 218,
+   "repetidas": 0,
+   "rechazadas": 3,
+   "cuarentena": 2,
+   "unidad": "manifiesto",
+   "semanas": 16,
+   "desde": "2026-08-01",
+   "hasta": "2026-11-15",
+   "importar_ms": 34,
+   "entrenar_ms": 24,
+   "total_ms": 58,
+   "filas_por_segundo": 3810,
+   "resultados": {
+    "kg": {
+     "modelo": "ses_opt",
+     "wape_validacion": 7.47,
+     "wape_ultimo_valor": 11.01,
+     "mae_modelo": 23049,
+     "mae_ultimo_valor": 33988,
+     "pronostico_sem_1": 304874,
+     "particion": "experimental",
+     "semanas_validacion": 6,
+     "semanas_prueba": 0,
+     "solo_historico": false
+    },
+    "qty": {
+     "modelo": "ses",
+     "wape_validacion": 7.06,
+     "wape_ultimo_valor": 10.21,
+     "mae_modelo": 1064,
+     "mae_ultimo_valor": 1540,
+     "pronostico_sem_1": 15343,
+     "particion": "experimental",
+     "semanas_validacion": 6,
+     "semanas_prueba": 0,
+     "solo_historico": false
+    },
+    "orders": {
+     "modelo": "ses_opt",
+     "wape_validacion": 12.44,
+     "wape_ultimo_valor": 13.1,
+     "mae_modelo": 2,
+     "mae_ultimo_valor": 2,
+     "pronostico_sem_1": 15,
+     "particion": "experimental",
+     "semanas_validacion": 6,
+     "semanas_prueba": 0,
+     "solo_historico": false
+    }
+   }
+  },
+  {
+   "nombre": "simulados_31",
+   "archivos": 31,
+   "bytes": 329168,
+   "filas": 1967,
+   "validas": 1962,
+   "repetidas": 0,
+   "rechazadas": 5,
+   "cuarentena": 5,
+   "unidad": "manifiesto",
+   "semanas": 135,
+   "desde": "2024-01-01",
+   "hasta": "2026-07-31",
+   "importar_ms": 132,
+   "entrenar_ms": 32,
+   "total_ms": 167,
+   "filas_por_segundo": 11778,
+   "resultados": {
+    "kg": {
+     "modelo": "ses_opt",
+     "wape_validacion": 13.97,
+     "wape_ultimo_valor": 19.11,
+     "mae_modelo": 41718,
+     "mae_ultimo_valor": 57067,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    },
+    "qty": {
+     "modelo": "ses_opt",
+     "wape_validacion": 15.35,
+     "wape_ultimo_valor": 23.77,
+     "mae_modelo": 2057,
+     "mae_ultimo_valor": 3185,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    },
+    "orders": {
+     "modelo": "ses_opt",
+     "wape_validacion": 10.8,
+     "wape_ultimo_valor": 15.41,
+     "mae_modelo": 2,
+     "mae_ultimo_valor": 2,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    }
+   }
+  },
+  {
+   "nombre": "todos_35",
+   "archivos": 35,
+   "bytes": 622635,
+   "filas": 2188,
+   "validas": 2180,
+   "repetidas": 0,
+   "rechazadas": 8,
+   "cuarentena": 7,
+   "unidad": "manifiesto",
+   "semanas": 150,
+   "desde": "2024-01-01",
+   "hasta": "2026-11-15",
+   "importar_ms": 140,
+   "entrenar_ms": 36,
+   "total_ms": 186,
+   "filas_por_segundo": 11763,
+   "resultados": {
+    "kg": {
+     "modelo": "ses_opt",
+     "wape_validacion": 14.12,
+     "wape_ultimo_valor": 18.13,
+     "mae_modelo": 44273,
+     "mae_ultimo_valor": 56839,
+     "pronostico_sem_1": 315039,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": false
+    },
+    "qty": {
+     "modelo": "ses_opt",
+     "wape_validacion": 14.68,
+     "wape_ultimo_valor": 19.0,
+     "mae_modelo": 2043,
+     "mae_ultimo_valor": 2645,
+     "pronostico_sem_1": 14254,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": false
+    },
+    "orders": {
+     "modelo": "ses_opt",
+     "wape_validacion": 10.19,
+     "wape_ultimo_valor": 15.92,
+     "mae_modelo": 1,
+     "mae_ultimo_valor": 2,
+     "pronostico_sem_1": 14,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": false
+    }
+   }
+  },
+  {
+   "nombre": "csv_100k_sintetico",
+   "archivos": 1,
+   "bytes": 3646142,
+   "filas": 100000,
+   "validas": 100000,
+   "repetidas": 0,
+   "rechazadas": 0,
+   "cuarentena": 0,
+   "unidad": "manifiesto",
+   "semanas": 515,
+   "desde": "2016-01-04",
+   "hasta": "2025-11-11",
+   "importar_ms": 750,
+   "entrenar_ms": 73,
+   "total_ms": 825,
+   "filas_por_segundo": 121212,
+   "resultados": {
+    "kg": {
+     "modelo": "ses_opt",
+     "wape_validacion": 4.98,
+     "wape_ultimo_valor": 8.01,
+     "mae_modelo": 214652,
+     "mae_ultimo_valor": 345354,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    },
+    "qty": {
+     "modelo": "ses_opt",
+     "wape_validacion": 4.98,
+     "wape_ultimo_valor": 8.01,
+     "mae_modelo": 9759,
+     "mae_ultimo_valor": 15699,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    },
+    "orders": {
+     "modelo": "ses_opt",
+     "wape_validacion": 4.99,
+     "wape_ultimo_valor": 7.64,
+     "mae_modelo": 10,
+     "mae_ultimo_valor": 15,
+     "pronostico_sem_1": null,
+     "particion": "completa",
+     "semanas_validacion": 26,
+     "semanas_prueba": 26,
+     "solo_historico": true
+    }
+   }
+  }
+ ]
+}

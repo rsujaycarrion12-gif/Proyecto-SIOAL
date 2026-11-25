@@ -1,0 +1,99 @@
+/* Utilidades — etiquetas QR, separadores, notas y clases auxiliares */
+
+.print-label {
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-container {
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: white;
+}
+
+.qr-container svg {
+  width: 230px;
+  height: 230px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 20px 0;
+}
+
+.hotspot-tag {
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  padding: 0;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 0;
+  font-size: 12px;
+  color: #5f5662;
+}
+
+.check-row input {
+  accent-color: var(--wine);
+}
+
+.header-badge {
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 800;
+  background: #fff6e6;
+  color: #b17c38;
+  padding: 7px 11px;
+}
+
+.inline-note {
+  font-size: 11px;
+  color: #948c99;
+  line-height: 1.7;
+}
+
+.scroll-y {
+  max-height: 440px;
+  overflow: auto;
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mobile-scrim {
+  display: none;
+}
+
+.export-note {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #867f89;
+}
+
+.button-link {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #8b3f6e;
+  font-weight: 750;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  text-decoration: underline;
+}
+
+input[type='checkbox'] {
+  accent-color: var(--wine);
+}

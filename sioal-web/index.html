@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#35192f" name="theme-color" />
+    <title>SIOAL 2.6 | Integridad de ubicaciones ABC</title>
+    <!-- Estilos (el orden respeta la cascada original) -->
+    <link rel="stylesheet" href="assets/css/base/variables-y-reset.css" />
+    <link rel="stylesheet" href="assets/css/layout/estructura.css" />
+    <link rel="stylesheet" href="assets/css/components/componentes.css" />
+    <link rel="stylesheet" href="assets/css/pages/mapa.css" />
+    <link rel="stylesheet" href="assets/css/components/estados-y-detalle.css" />
+    <link rel="stylesheet" href="assets/css/components/modal.css" />
+    <link rel="stylesheet" href="assets/css/components/formularios-y-graficos.css" />
+    <link rel="stylesheet" href="assets/css/components/notificaciones.css" />
+    <link rel="stylesheet" href="assets/css/components/utilidades.css" />
+    <link rel="stylesheet" href="assets/css/layout/responsive.css" />
+    <link rel="stylesheet" href="assets/css/pages/mapa-abc.css" />
+    <link rel="stylesheet" href="assets/css/pages/entrenamiento.css" />
+    <link rel="stylesheet" href="assets/css/pages/clasificacion-abc.css" />
+  </head>
+
+  <body>
+    <div class="mobile-scrim"></div>
+    <div class="app">
+      <aside class="side"></aside>
+      <main class="main">
+        <header class="top">
+          <div class="top-left">
+            <button aria-label="Abrir menú" class="mobile-toggle" id="mobile-menu" title="Menú">
+              <svg
+                fill="none"
+                height="19"
+                stroke="currentColor"
+                stroke-width="2"
+                viewbox="0 0 24 24"
+                width="19"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16"></path>
+              </svg>
+            </button>
+            <div>
+              <div class="top-greeting">Transportes Ochoa · Gestión de almacén</div>
+              <div class="top-title">Panel de control</div>
+            </div>
+          </div>
+          <div class="top-right">
+            <span class="top-chip">DATOS DEMO</span
+            ><select class="role-box" id="role" title="Simular vista por rol">
+              <option value="admin">Administrador (demo)</option>
+              <option value="worker">Trabajador (demo)</option></select
+            ><span class="header-badge">PROTOTIPO LOCAL</span>
+          </div>
+        </header>
+        <div class="content" id="content"></div>
+      </main>
+    </div>
+    <div id="modal-root"></div>
+
+    <!-- Scripts: configuración → utilidades → dominio → módulos → estado → arranque -->
+    <script src="src/config/app.config.js"></script>
+    <script src="src/shared/utils/formato.js"></script>
+    <script src="src/shared/utils/texto.js"></script>
+    <script src="src/config/valores-iniciales.js"></script>
+    <script src="src/config/rutas.js"></script>
+    <script src="src/shared/ui/iconos.js"></script>
+    <script src="src/shared/ui/componentes.js"></script>
+    <script src="src/data/demo.js"></script>
+    <script src="src/core/persistencia.js"></script>
+    <script src="src/core/auditoria.js"></script>
+    <script src="src/core/router.js"></script>
+    <script src="src/domain/inventario.js"></script>
+    <script src="src/domain/capacidad.js"></script>
+    <script src="src/domain/encomiendas.js"></script>
+    <script src="src/layout/shell.js"></script>
+    <script src="src/modules/panel/panel.view.js"></script>
+    <script src="src/modules/mapa/mapa.view.js"></script>
+    <script src="src/modules/encomiendas/encomiendas.view.js"></script>
+    <script src="src/modules/operaciones/operaciones.view.js"></script>
+    <script src="src/modules/tareas/tareas.js"></script>
+    <script src="src/modules/optimizacion/optimizacion-milp.js"></script>
+    <script src="src/modules/buscador/buscador.js"></script>
+    <script src="src/modules/qr/qr-generador.js"></script>
+    <script src="src/modules/qr/qr.view.js"></script>
+    <script src="src/services/lectores/xlsx-reader.js"></script>
+    <script src="src/services/lectores/csv-parser.js"></script>
+    <script src="src/modules/importar/mapeo-columnas.js"></script>
+    <script src="src/modules/importar/importar.js"></script>
+    <script src="src/services/exportacion.js"></script>
+    <script src="src/services/respaldo.js"></script>
+    <script src="src/modules/reportes/reportes.js"></script>
+    <script src="src/modules/personal/personal.js"></script>
+    <script src="src/modules/alertas/alertas.view.js"></script>
+    <script src="src/modules/configuracion/configuracion.js"></script>
+    <script src="src/data/entrenamiento-semilla.js"></script>
+    <script src="src/modules/entrenamiento/entrenamiento.persistencia.js"></script>
+    <script src="src/modules/entrenamiento/entrenamiento.utilidades.js"></script>
+    <script src="src/modules/entrenamiento/entrenamiento.importacion.js"></script>
+    <script src="src/modules/entrenamiento/entrenamiento.modelos.js"></script>
+    <script src="src/modules/entrenamiento/entrenamiento.view.js"></script>
+    <script src="src/modules/abc/abc.clasificacion.js"></script>
+    <script src="src/modules/abc/abc.plan-zonas.js"></script>
+    <script src="src/modules/abc/abc.view.js"></script>
+    <script src="src/modules/abc/abc.carga-masiva.js"></script>
+    <script src="src/core/acciones.js"></script>
+    <script src="src/core/estado.js"></script>
+    <script src="src/core/estado-entrenamiento.js"></script>
+    <script src="src/main.js"></script>
+  </body>
+</html>

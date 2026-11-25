@@ -1,0 +1,127 @@
+/* Pantalla Mapa digital — plano, zonas y leyenda */
+
+.map-grid {
+  display: grid;
+  grid-template-columns: minmax(400px, 1.3fr) minmax(310px, 0.7fr);
+  gap: 20px;
+}
+
+.map-shell {
+  background: linear-gradient(180deg, #fcfafc, #f8f5f8);
+  border: 1px solid #eee9ef;
+  border-radius: 16px;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.warehouse-svg {
+  width: 100%;
+  max-width: 790px;
+  max-height: 940px;
+  cursor: default;
+}
+
+.warehouse-svg > :not(.zone-hot) {
+  pointer-events: none;
+}
+
+.warehouse-svg .zone-hot {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.warehouse-svg .zone-hot:hover {
+  opacity: 0.8;
+}
+
+.zone-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 11px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: white;
+}
+
+.zone-box:hover,
+.zone-box.selected {
+  border-color: #bd9eb5;
+  box-shadow: 0 5px 18px #5c1e4712;
+}
+
+.zone-box .zone-color {
+  height: 36px;
+  width: 5px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.warehouse-note {
+  margin-top: 13px;
+  font-size: 11px;
+  color: #948d99;
+  line-height: 1.6;
+}
+
+.metric-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.metric-line strong {
+  font-size: 13px;
+}
+
+.metric-line span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 11px;
+  color: #847b89;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.75fr);
+  gap: 19px;
+}
+
+.model-chip {
+  background: #faf2f7;
+  border: 1px solid #f1dfe9;
+  color: #873b6b;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-weight: 800;
+  font-size: 11px;
+}

@@ -1,0 +1,184 @@
+/* Pantalla Clasificación ABC por peso */
+
+/* Clasificación ABC automatizada por peso, independizada de la ubicación real */
+.abc-hero {
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: linear-gradient(118deg, #321d39 0%, #713256 68%, #995780 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.abc-hero h2 {
+  font-size: 22px;
+  margin: 6px 0 8px;
+}
+
+.abc-hero p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #f5dbe9;
+  margin: 0;
+  max-width: 690px;
+}
+
+.abc-hero .pill {
+  background: #ffffff1a;
+  color: #fff;
+  border-color: #ffffff44;
+}
+
+.abc-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.abc-col {
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.abc-col-head {
+  padding: 15px 17px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.abc-letter {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.abc-col-body {
+  padding: 18px;
+}
+
+.abc-big {
+  font-size: 29px;
+  font-weight: 870;
+  letter-spacing: -0.8px;
+}
+
+.abc-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.abc-meter {
+  height: 9px;
+  background: #f2eef2;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.abc-meter span {
+  display: block;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.abc-chip {
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  background: #f4eef3;
+  color: #683653;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.abc-note {
+  background: #f7f4fa;
+  border: 1px solid #e5d9e8;
+  border-radius: 12px;
+  padding: 13px 15px;
+  line-height: 1.6;
+  color: #705c6e;
+  font-size: 12px;
+}
+
+.abc-weight-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 11px 0;
+  gap: 10px;
+}
+
+.abc-weight-row:last-child {
+  border: 0;
+}
+
+.abc-weight-row small {
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.abc-form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.abc-form-inline .field {
+  min-width: 100px;
+  max-width: 170px;
+  flex: 1;
+  margin: 0;
+}
+
+.abc-table {
+  max-height: 450px;
+  overflow: auto;
+}
+
+.abc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 12px 0;
+}
+
+.abc-demo-caption {
+  font-size: 11px;
+  color: #866f83;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .abc-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .abc-hero {
+    padding: 20px;
+  }
+
+  .abc-hero h2 {
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,55 @@
+/* Componentes — ventanas modales */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #21121fa8;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: white;
+  border-radius: 19px;
+  box-shadow: 0 35px 90px #0d001c55;
+  width: min(620px, 100%);
+  max-height: 94vh;
+  overflow: auto;
+}
+
+.modal-head {
+  padding: 22px 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal-head h2 {
+  font-size: 19px;
+  margin: 0 0 5px;
+}
+
+.modal-body {
+  padding: 22px 24px;
+}
+
+.modal-actions {
+  padding: 16px 24px 22px;
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  height: 31px;
+  width: 31px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+}

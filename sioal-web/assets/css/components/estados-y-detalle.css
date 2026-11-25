@@ -1,0 +1,80 @@
+/* Componentes — pasos, estados vacíos y fichas de detalle */
+
+.steps {
+  display: grid;
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: #fcfafc;
+  border-radius: 10px;
+}
+
+.step-no {
+  width: 27px;
+  height: 27px;
+  border-radius: 9px;
+  background: #f3e9f0;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 850;
+  color: var(--wine);
+  flex-shrink: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 34px 17px;
+  color: #998e9b;
+}
+
+.empty .empty-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 13px;
+  background: #f9eff4;
+  border-radius: 16px;
+  color: #a2537d;
+}
+
+.empty strong {
+  display: block;
+  color: #544456;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.empty p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.detail-list {
+  display: grid;
+  gap: 14px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #f2eef2;
+  padding-bottom: 12px;
+  font-size: 12px;
+}
+
+.detail-row span {
+  color: #8d8391;
+}
+
+.detail-row strong {
+  color: #423348;
+  text-align: right;
+}

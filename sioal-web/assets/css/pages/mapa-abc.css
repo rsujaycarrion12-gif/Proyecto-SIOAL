@@ -1,0 +1,27 @@
+/* Pantalla Mapa — superposición ABC sobre el plano real */
+
+/* MAPA ABC: superposición interactiva sobre la imagen original enviada */
+.warehouse-svg.warehouse-abc {
+  max-width: 770px;
+  max-height: none;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.warehouse-abc .map-zone-select {
+  cursor: pointer;
+  transition: filter 0.18s ease;
+}
+
+.warehouse-abc .map-zone-select:hover {
+  filter: drop-shadow(0 0 10px rgba(27, 63, 118, 0.3));
+}
+
+.warehouse-abc .map-zone-select:focus {
+  outline: none;
+  filter: drop-shadow(0 0 15px rgba(49, 99, 194, 0.45));
+}
+
+.map-shell:has(.warehouse-abc) {
+  background: #fff;
+}

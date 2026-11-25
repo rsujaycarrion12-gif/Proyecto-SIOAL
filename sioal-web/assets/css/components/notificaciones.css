@@ -1,0 +1,38 @@
+/* Componentes — notificaciones flotantes */
+
+.notification {
+  position: fixed;
+  bottom: 25px;
+  right: 26px;
+  z-index: 110;
+  min-width: 240px;
+  max-width: 370px;
+  background: #302335;
+  color: #fff;
+  border-radius: 13px;
+  padding: 15px 18px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 14px 40px #1c0d2340;
+  animation: slideIn 0.22s ease;
+}
+
+.notification.error {
+  background: #a53551;
+}
+
+.notification.success {
+  background: #226d54;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
